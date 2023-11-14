@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dviuvq1rdefou"]
+[gd_scene load_steps=12 format=3 uid="uid://dviuvq1rdefou"]
 
 [ext_resource type="Texture2D" uid="uid://dhy8pexge3c5r" path="res://Assets/portal_start.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://dvelpgs5ro6gq" path="res://Assets/Pixel background .jpeg" id="1_qounv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://iyxxa2othkrg" path="res://Levels/Camera.tscn" id="5"]
 [ext_resource type="Script" path="res://Levels/Spawn.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://bht6f03rjuub" path="res://Assets/Tiles.png" id="6_2qmns"]
+[ext_resource type="Script" path="res://Levels/Golem.gd" id="7_6syn8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kmfvh"]
 texture = ExtResource("6_2qmns")
@@ -800,6 +801,9 @@ polygon = PackedVector2Array(12, -48.7, 23, -35.7, 23, -32.4, 25, -27.9, 25, 27.
 script = ExtResource("2")
 
 [node name="Enemy_Container" type="Node2D" parent="."]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Enemy_Container"]
+script = ExtResource("7_6syn8")
 
 [node name="Platform" type="TileMap" parent="."]
 position = Vector2(0, 6)
